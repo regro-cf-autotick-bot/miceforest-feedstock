@@ -1,4 +1,4 @@
-{% set version = "5.1.0" %}
+{% set version = "5.1.2" %}
 
 package:
   name: miceforest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
-  sha256: c484b791518b45a918cf61fec100ce33c73974c7bb78acec6a31b29b9de4e234
+  sha256: 1302eedb79a816425191331c760a6e674335fe5ccb588ecd28c3c9e26f166546
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - scipy
+    - scipy >=1.6.0
     - lightgbm
     - numpy
     - pandas
