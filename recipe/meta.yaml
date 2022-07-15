@@ -1,4 +1,4 @@
-{% set version = "5.4.0" %}
+{% set version = "5.5.4" %}
 
 package:
   name: miceforest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
-  sha256: 8be132391ea0e9e14ccc1bb8419db706ebd70ea28c880e6fd643f74476a08a65
+  sha256: 9f4078f781a6b38215e36fb209ba2cdfcc7518af742dfe6c693c5697d97aa1be
 
 build:
   noarch: python
