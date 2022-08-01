@@ -1,4 +1,4 @@
-{% set version = "5.1.2" %}
+{% set version = "5.6.0" %}
 
 package:
   name: miceforest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
-  sha256: 1302eedb79a816425191331c760a6e674335fe5ccb588ecd28c3c9e26f166546
+  sha256: a9d1b2546fb80ab03ce8a3d2492b67ee39b8af033f1b688b6785261da471d4e6
 
 build:
   noarch: python
@@ -21,8 +21,10 @@ requirements:
   run:
     - python >=3.7
     - scipy >=1.6.0
-    - lightgbm
+    - lightgbm >=3.3.1
     - numpy
+    - python-blosc
+    - dill
     - pandas
     - seaborn >=0.11.0
     - matplotlib-base >=3.3.0
