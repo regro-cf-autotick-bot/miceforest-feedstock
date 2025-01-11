@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/miceforest/miceforest-{{ version }}.tar.gz
   sha256: a81a03e69d97273a77d83b0a14c61ce33578d2704d9f86f40102f54e1b8540dc
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy >=1.6.0
     - lightgbm >=3.3.1
     - numpy
@@ -37,6 +37,7 @@ test:
     - miceforest
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
